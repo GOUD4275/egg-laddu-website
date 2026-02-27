@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+</head>
+<body>
+
+<h2>Today's Sales</h2>
+
+<h1 id="sales"></h1>
+
+<script>
+let sales = localStorage.getItem("sales");
+document.getElementById("sales").innerText = "₹ " + (sales || 0);
+</script>
+
+</body>
+</html>

@@ -19,6 +19,36 @@ function confirmOrder() {
     }
 
     if (confirm("Your total is ₹" + total + ". Confirm order?")) {
+        sendOrder();    
+    }
+
+    if (total < 50) {
+    alert("Minimum order is ₹50");
+    return;
+    }	
+}
+
+function confirmOrder() {
+
+    let total = document.getElementById("total").innerText;
+    let center = document.getElementById("center").value;
+
+    if (total == 0) {
+        alert("Please select at least one item");
+        return;
+    }
+
+    if (total < 50) {
+        alert("Minimum order is ₹50");
+        return;
+    }
+
+    if (center == "") {
+        alert("Please select delivery center (Main Road only)");
+        return;
+    }
+
+    if (confirm("Your total is ₹" + total + ". Confirm order?")) {
         sendOrder();
     }
 }
