@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Naresh Egg & Laddu Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <h1>🥚 Naresh Egg & Laddu Shop</h1>
+    <p class="tag">All Items ₹10 Only</p>
+
+    <div class="product">
+        <img src="egg.jpg">
+        <h2>Boiled Egg</h2>
+        <p>₹10</p>
+        <input type="number" id="eggQty" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <div class="product">
+        <img src="nuvvula.jpg">
+        <h2>Nuvvula Laddu</h2>
+        <p>₹10</p>
+        <input type="number" id="ladduQty" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <div class="product">
+        <img src="karjuram.jpg">
+        <h2>Karjuram Laddu</h2>
+        <p>₹10</p>
+        <input type="number" id="karjuramQty" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <!-- ✅ ADD DELIVERY SECTION HERE -->
+
+    <h3 style="color:green;">🚚 Free Delivery – Main Road Centers Only</h3>
+    <p style="color:red;">❌ No Door Step Delivery</p>
+
+    <select id="center">
+        <option value="">Select Delivery Center</option>
+        <option value="Bus Stand Main Road">Bus Stand Main Road</option>
+        <option value="Market Center">Market Center</option>
+        <option value="Temple Road Center">Temple Road Center</option>
+    </select>
+
+    <!-- ✅ END DELIVERY SECTION -->
+
+    <input type="text" id="customerName" placeholder="Your Name">
+    <input type="text" id="location" placeholder="Your Address">
+
+    <button onclick="confirmOrder()">Place Order</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
